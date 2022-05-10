@@ -2,9 +2,9 @@
   <h1>My tasks</h1>
     <ul>
       <% @tasks.each do |task|%>
+      <li><%= task.id %></li>
       <li><%= link_to task.title, task_path(task) %></li>
         <ul>
-          <li><%= task.id %></li>
           <li><%= task.details %></li>
           <li><%= task.completed %></li>
         </ul>
